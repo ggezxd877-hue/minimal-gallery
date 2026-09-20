@@ -1,0 +1,481 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <div class="announcement">
+        <div class="announcement-text">
+            ✦ ยินดีต้อนรับเข้าสู่ Minimal Gallery ✦ รวมภาพสวย ๆ ในสไตล์มินิมอล ✦
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <nav class="navbar">
+        <a href="#" class="logo" onclick="showPage('home')">
+            <span class="logo-icon">M</span>
+            Minimal Gallery
+        </a>
+
+        <div class="nav-menu">
+            <a href="#" class="active" onclick="showPage('home')">หน้าแรก</a>
+            <a href="#" onclick="showPage('gallery')">แกลเลอรี</a>
+            <a href="#" onclick="showPage('creator')">ผู้จัดทำ</a>
+            <a href="#" onclick="showPage('about')">เกี่ยวกับ</a>
+        </div>
+
+        <button class="menu-toggle">☰</button>
+    </nav>
+
+
+    
+    <section id="home" class="page active-page">
+
+        <div class="hero">
+            <p class="small-title">WELCOME TO</p>
+            <h1>Minimal Gallery</h1>
+            <p>
+                เว็บไซต์รวบรวมภาพถ่ายในสไตล์เรียบง่าย
+                สะอาด และสบายตา
+            </p>
+
+            <button class="main-button" onclick="showPage('gallery')">
+                ดูแกลเลอรี
+            </button>
+        </div>
+
+        <div class="container">
+            <h2>ภาพแนะนำ</h2>
+
+            <div class="featured-grid">
+
+                <div class="featured-card">
+                    <img src="https://picsum.photos/600/400?random=1">
+                    <h3>Nature</h3>
+                    <p>ภาพธรรมชาติ</p>
+                </div>
+
+                <div class="featured-card">
+                    <img src="https://picsum.photos/600/400?random=2">
+                    <h3>City</h3>
+                    <p>ภาพเมือง</p>
+                </div>
+
+                <div class="featured-card">
+                    <img src="https://picsum.photos/600/400?random=3">
+                    <h3>Minimal</h3>
+                    <p>ภาพสไตล์มินิมอล</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    
+    <section id="gallery" class="page">
+
+        <div class="page-header">
+            <p>COLLECTION</p>
+            <h1>แกลเลอรี</h1>
+            <span>รวมภาพทั้งหมด</span>
+        </div>
+
+        <div class="container">
+
+            <div class="gallery-tools">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="ค้นหารูปภาพ..."
+                >
+
+                <div class="filters">
+                    <button class="filter active" data-filter="all">
+                        ทั้งหมด
+                    </button>
+
+                    <button class="filter" data-filter="nature">
+                        ธรรมชาติ
+                    </button>
+
+                    <button class="filter" data-filter="city">
+                        เมือง
+                    </button>
+
+                    <button class="filter" data-filter="minimal">
+                        มินิมอล
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-card" data-category="nature">
+                    <img src="https://picsum.photos/600/700?random=10">
+                    <div class="card-info">
+                        <h3>Nature 01</h3>
+                        <p>ธรรมชาติ</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-category="city">
+                    <img src="https://picsum.photos/600/700?random=11">
+                    <div class="card-info">
+                        <h3>City 01</h3>
+                        <p>เมือง</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-category="minimal">
+                    <img src="https://picsum.photos/600/700?random=12">
+                    <div class="card-info">
+                        <h3>Minimal 01</h3>
+                        <p>มินิมอล</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-category="nature">
+                    <img src="https://picsum.photos/600/700?random=13">
+                    <div class="card-info">
+                        <h3>Nature 02</h3>
+                        <p>ธรรมชาติ</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-category="city">
+                    <img src="https://picsum.photos/600/700?random=14">
+                    <div class="card-info">
+                        <h3>City 02</h3>
+                        <p>เมือง</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-category="minimal">
+                    <img src="https://picsum.photos/600/700?random=15">
+                    <div class="card-info">
+                        <h3>Minimal 02</h3>
+                        <p>มินิมอล</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-category="nature">
+                    <img src="https://picsum.photos/600/700?random=16">
+                    <div class="card-info">
+                        <h3>Nature 03</h3>
+                        <p>ธรรมชาติ</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-category="city">
+                    <img src="https://picsum.photos/600/700?random=17">
+                    <div class="card-info">
+                        <h3>City 03</h3>
+                        <p>เมือง</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+    <section id="creator" class="page">
+
+        <div class="page-header">
+            <p>CREATOR</p>
+            <h1>ผู้จัดทำ</h1>
+            <span>ข้อมูลผู้จัดทำเว็บไซต์</span>
+        </div>
+
+        <div class="container">
+
+            <div class="creator-box">
+
+                <div class="creator-image">
+                <img src="profile.jpg" alt="รูปผู้จัดทำ">
+           </div>
+                <div class="creator-info">
+                    <p class="creator-label">ABOUT ME</p>
+
+                    <h2>ชื่อ นายธิติศักดิ์ โพธิ์ศรี</h2>
+
+                    <p>
+                        นักเรียนชั้น ม.4/11
+                    </p>
+
+                    <p>
+                        โรงเรียนชุมเเพศึกษา
+                    </p>
+
+                    <p>
+                        เว็บไซต์นี้จัดทำขึ้นเพื่อเป็นส่วนหนึ่ง
+                        ของการเรียนการสอน
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+    <section id="about" class="page">
+
+        <div class="page-header">
+            <p>ABOUT</p>
+            <h1>เกี่ยวกับเว็บไซต์</h1>
+            <span>รายละเอียดของเว็บไซต์</span>
+        </div>
+
+        <div class="container">
+
+            <div class="about-box">
+
+                <h2>Minimal Gallery</h2>
+
+                <p>
+                    Minimal Gallery เป็นเว็บไซต์สำหรับรวบรวม
+                    และนำเสนอภาพถ่ายในรูปแบบที่เรียบง่าย
+                    โดยเน้นการออกแบบที่สะอาดและใช้งานง่าย
+                </p>
+
+                <h3>เทคโนโลยีที่ใช้</h3>
+
+                <div class="technology">
+
+                    <div>
+                        <strong>HTML</strong>
+                        <span>โครงสร้างเว็บไซต์</span>
+                    </div>
+
+                    <div>
+                        <strong>CSS</strong>
+                        <span>ออกแบบและตกแต่งเว็บไซต์</span>
+                    </div>
+
+                    <div>
+                        <strong>JavaScript</strong>
+                        <span>เพิ่มความสามารถในการใช้งาน</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Minimal Gallery</p>
+    </footer>
+
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+
+        <button class="close-lightbox">×</button>
+
+        <img id="lightbox-img" src="" alt="Preview">
+
+    </div>
+
+
+    <script>
+
+        function showPage(pageId) {
+
+            event.preventDefault();
+
+            document.querySelectorAll(".page").forEach(page => {
+                page.classList.remove("active-page");
+            });
+
+            document.getElementById(pageId).classList.add("active-page");
+
+
+            document.querySelectorAll(".nav-menu a").forEach(link => {
+                link.classList.remove("active");
+            });
+
+
+            const menuLinks = document.querySelectorAll(".nav-menu a");
+
+            menuLinks.forEach(link => {
+
+                const onclick = link.getAttribute("onclick");
+
+                if (onclick && onclick.includes("'" + pageId + "'")) {
+                    link.classList.add("active");
+                }
+
+            });
+
+
+            document.querySelector(".nav-menu").classList.remove("show");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* Mobile Menu */
+
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("show");
+
+        });
+
+
+        /* Gallery Filter */
+
+        const filters = document.querySelectorAll(".filter");
+
+        const cards = document.querySelectorAll(".gallery-card");
+
+        const search = document.getElementById("search");
+
+
+        function filterGallery() {
+
+            const activeFilter =
+                document.querySelector(".filter.active").dataset.filter;
+
+            const searchText =
+                search.value.toLowerCase();
+
+
+            cards.forEach(card => {
+
+                const category = card.dataset.category;
+
+                const title =
+                    card.querySelector("h3").textContent.toLowerCase();
+
+                const matchCategory =
+                    activeFilter === "all" ||
+                    category === activeFilter;
+
+                const matchSearch =
+                    title.includes(searchText);
+
+                if (matchCategory && matchSearch) {
+
+                    card.style.display = "block";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        filters.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                filters.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                filterGallery();
+
+            });
+
+        });
+
+
+        search.addEventListener("input", filterGallery);
+
+
+       
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const lightboxImg =
+            document.getElementById("lightbox-img");
+
+        const closeLightbox =
+            document.querySelector(".close-lightbox");
+
+
+        document.querySelectorAll(".gallery-card img").forEach(img => {
+
+            img.addEventListener("click", () => {
+
+                lightboxImg.src = img.src;
+
+                lightbox.classList.add("show");
+
+            });
+
+        });
+
+
+        closeLightbox.addEventListener("click", () => {
+
+            lightbox.classList.remove("show");
+
+        });
+
+
+        lightbox.addEventListener("click", event => {
+
+            if (event.target === lightbox) {
+
+                lightbox.classList.remove("show");
+
+            }
+
+        });
+
+
+        document.addEventListener("keydown", event => {
+
+            if (event.key === "Escape") {
+
+                lightbox.classList.remove("show");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
